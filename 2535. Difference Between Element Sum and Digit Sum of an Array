@@ -1,0 +1,20 @@
+class Solution {
+    public int differenceOfSum(int[] nums) {
+        int sumOfDigits = 0;
+        int sumofnum=0;
+        for (int num : nums) {
+            sumOfDigits += sumDigits(num);
+            sumofnum += num;
+        }
+        int ans =  sumofnum - sumOfDigits;
+        return ans;
+    }
+    public static int sumDigits(int num) {
+        int sum = 0;
+        while (num != 0) {
+            sum += num % 10; // Add the last digit to sum
+            num /= 10;       // Remove the last digit
+        }
+        return sum;
+    }
+}
