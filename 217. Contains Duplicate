@@ -8,6 +8,7 @@ class Solution {
             int j = i+1;
             if(nums[i]==nums[j]){
                 ans = true;
+                break;
             }
         }
     }
